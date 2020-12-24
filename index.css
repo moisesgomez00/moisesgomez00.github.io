@@ -1,0 +1,6 @@
+div.section{
+    position: fixed;
+    background-color: rgba(204, 164, 59, 1) ;
+    width: 100%;
+    height: 100%;
+}
