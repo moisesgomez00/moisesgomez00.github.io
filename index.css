@@ -1,6 +1,28 @@
-div.section{
+* {
+    border-radius: 0;
+}
+
+.section{
     position: fixed;
-    background-color: rgba(204, 164, 59, 1) ;
+    background-color: #14213d;
     width: 100%;
     height: 100%;
+}
+
+div#meetCard{
+    background-color: #e5e5e5;
+    max-width: 600px;
+    border-radius: 0;
+}
+
+div#meetCard *{
+    border-radius: 0;
+}
+
+img#bg-sing{
+    position: fixed;
+    bottom: 0;
+    left: 15%;
+    max-width: 100%;
+    max-height: 100%;
 }
