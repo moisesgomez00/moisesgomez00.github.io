@@ -1,3 +1,4 @@
+/** Calcula automáticamente la edad */
 function getAge(){
     let now = Date.now()
     let birth = new Date(2000,1,5)

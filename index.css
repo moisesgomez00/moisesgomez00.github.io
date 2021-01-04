@@ -1,16 +1,10 @@
 /*Raiz y documento completo*/
 
 :root{
-    --principal: #210031;
-    --secondary: #310029;
-    --third: #310900;
-    --fourth: #293100;
-    --light: #747076;
-    --bright: #C8BFCB;
+    --principal: #e5e2da;
+    --secondary: #e6e6e6;
+    --third: #898299;
 
-}
-* {
-    border-radius: 0;
 }
 
 /* Secciones, backgound y divisiones */
@@ -19,10 +13,14 @@ img#bg-sing{
     position: fixed;
     bottom: 0;
     left: 15%;
-    max-width: 100%;
     max-height: 100%;
-    z-index: 0
+}
 
+@supports (-moz-appearance: none) {
+    img#bg-sing{
+        left: auto;
+        right: 15%;
+    }
 }
 
 .section{
@@ -33,20 +31,33 @@ img#bg-sing{
     min-width: 100%;
 }
 
-.cataloge{
-    background-color: var(--secondary);
-}
-
 
 /*Elementos de la presentación*/
-
 div#meetCard{
-    background-color: var(--bright);
+    background-color: var(--secondary);
     max-width: 600px;
     border-radius: 0;
+    box-shadow: 0px 0px 20px 0px var(--third)
 }
 
 div#meetCard *{
     border-radius: 0;
 }
 
+/* Definición de las clases necesarias para capas */
+.d1{
+    z-index: 1;
+}
+
+.d2{
+    z-index: 2;
+}
+
+.d3{
+    z-index: 3;
+}
+
+/* Botones */
+.btn-b{
+    border-radius: 0;
+}
