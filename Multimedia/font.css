@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Bauhaus93';
-    font-weight: normal;
-    font-style: normal;
-    src: url('bauhaus-93-webfont.woff2') format('woff2'),
-    url('bauhaus-93-webfont.woff') format('woff'),
-    url('bauhaus-93.ttf') format('ttf');
-}

@@ -14,8 +14,10 @@ img#bg-sing{
     bottom: 0;
     left: 15%;
     max-height: 100%;
-}
+    opacity: 0;
+    animation: fall 2s ease-in 2s;
 
+}
 @supports (-moz-appearance: none) {
     img#bg-sing{
         left: auto;
@@ -44,6 +46,11 @@ div#meetCard *{
     border-radius: 0;
 }
 
+img#brandIn{
+    position: fixed;
+    max-height: 100%;
+}
+
 /* Definición de las clases necesarias para capas */
 .d1{
     z-index: 1;
@@ -60,4 +67,36 @@ div#meetCard *{
 /* Botones */
 .btn-b{
     border-radius: 0;
+}
+
+.appear{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.disappear{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+@keyframes fall{
+    0%{
+        bottom: 100%;
+    }
+    50%{
+        bottom: 0%;
+        transform: scale(1.09,0.9); 
+    }       
+    75%{
+        bottom: 8%;
+        transform: scale(.9,1.1); 
+    }
+
+    100%{
+        bottom: 0%;
+    }
+
+
 }
