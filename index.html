@@ -10,18 +10,21 @@
     <title>Moisés Gómez</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="index.css" rel="stylesheet">
     <link rel="icon" href="Multimedia/logo.svg" type="image/svg+xml">
 </head>
 
 <body>
     <!--Logo de introducción-->
-    <img src="Multimedia/logo.svg" id="brandIn" class="disappear">
+    <img src="Multimedia/MG.svg" id="MG" >
+    <img src="Multimedia/firma.svg" id="brandShape">
 
     <!--Firma de fondo-->
-    <img src="Multimedia/firma.svg" id="bg-sing" class="d2 appear">
 
-    <section class="container px-5 p-md-5 section d1" style="vertical-align: bottom;">
+    <!--     <img src="Multimedia/firma.svg" id="bg-sing" class="d2 appear"> -->
+
+    <section class="container px-5 p-md-5 section d1" id="principalSection" style="vertical-align: bottom; visibility: hidden;">
         <div class="row pt-md-5 ">
             <div class="col pt-md-5">
                 <!--Tarjeta de presentación-->
@@ -57,12 +60,14 @@
         <div class="row pt-5 p-md-5 ">
             <div class="row">
                 <div class="col d3 text-end">
-                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal" data-bs-target="#exampleModal" id="aboutMe">
+                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" id="aboutMe">
                         Un poco sobre mi...
                     </button>
                 </div>
                 <div class="col d3 text-start">
-                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal" data-bs-target="#exampleModal" id="aboutJob">
+                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" id="aboutJob">
                         Sobre mi trabajo...
                     </button>
                 </div>
@@ -72,18 +77,18 @@
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Aún en desarrollo...</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Aún en desarrollo...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Multimedia/work.svg" alt="Working..." style="position: relative; max-width: 100%;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Entendido</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <img src="Multimedia/work.svg" alt="Working..." style="position: relative; max-width: 100%;">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Entendido</button>
-            </div>
-          </div>
         </div>
     </div>
 
@@ -94,10 +99,7 @@
     crossorigin="anonymous"></script>
 <script src="index.js"></script>
 <script>
-    window.addEventListener('load', function () {
-        document.getElementById("age").innerHTML = `${getAge()} años`;
-        meltAnimation()  
-    })
+
 </script>
 
 </html>
