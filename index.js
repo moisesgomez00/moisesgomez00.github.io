@@ -25,20 +25,24 @@ const animateCSS = (element, animation, prefix = 'animate__', delay = 'null') =>
     });
 }
 
-window.addEventListener('load',  () => {
+window.addEventListener('load', () => {
     document.getElementById("age").innerHTML = `${getAge()} años`;
-
+    document.getElementById("MG").style.visibility = "visible";
     animateCSS("#MG", "lightSpeedInLeft").then((message) => {
-        animateCSS("#MG", "bounceOut","animate__","animate__delay-1s").then((res) => {
+        animateCSS("#MG", "bounceOut", "animate__", "animate__delay-1s").then((res) => {
             document.getElementById("MG").style.visibility = "hidden";
         });
     });
 
-    animateCSS("#brandShape","lightSpeedInRight").then((message) =>{
-        animateCSS("#brandShape","bounceOut","animate__","animate__delay-1s").then((res) => {
+    document.getElementById("brandShape").style.visibility = "visible";
+    animateCSS("#brandShape", "lightSpeedInRight").then((message) => {
+        animateCSS("#brandShape", "bounceOut", "animate__", "animate__delay-1s").then((res) => {
             document.getElementById("brandShape").style.visibility = "hidden";
-            document.getElementById("principalSection").style.visibility = "visible";
-            animateCSS("#principalSection","fadeInDownBig");
+            document.getElementById("principalSectionBg").style.backgroundColor = "#3AAFA9";
+            document.getElementById("meetCard").style.visibility = "visible";
+            animateCSS("#meetCard", "zoomIn").then((message) => {
+                document.getElementById("principalBtns").style.visibility = "visible";
+            });
         });
     });
 });

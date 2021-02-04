@@ -1,36 +1,36 @@
 /*Raiz y documento completo*/
 
 :root{
-    --principal: #e5e2da;
-    --secondary: #e6e6e6;
-    --third: #898299;
+    --first: #17252A;
+    --second: #2B7A78;
+    --third: #3AAFA9;
+    --fourth: #DEF2F1;
+    --fifth: #FEFFFF;
 
 }
 
 
 /*Secciones*/
-
 .section{
-    background-color: var(--principal);
     width: 100vw;
     height: 100vh;
     min-height: 100%;
     min-width: 100%;
 }
 
+#principalSectionBg{
+    background-color: var(--fourth);
+    transition: background-color 0.5s;
+}
+
+
 
 /*Elementos de la presentación*/
 div#meetCard{
-    background-color: var(--secondary);
+    background-color: var(--fourth);
     max-width: 600px;
-    border-radius: 0;
-    box-shadow: 0px 0px 15px 0px var(--third)
+    border-color: var(--first);
 }
-
-div#meetCard *{
-    border-radius: 0;
-}
-
 
 /* Definición de las clases necesarias para capas */
 .d1{
@@ -45,36 +45,39 @@ div#meetCard *{
     z-index: 3;
 }
 
+
 /* Botones */
 .btn-b{
-    border-radius: 0;
-    border: 1px solid black;
-    background-color: var(--secondary);
+    border: 1px solid var(--first);
+    background-color: var(--fifth);
 } 
+
 
 /*Presentación de marca*/
 
 /*Para desktop*/
 
-    #brandShape{
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-    }
-    
-    #MG{
-        position: fixed;
-        max-height: 33vh;
-        max-width: 70vw;
-        bottom: 13vh;
-        left: 9vw;
-    }
+#brandShape{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+}
 
-    @-moz-document url-prefix(){
-        #MG{
-            left: 32vw;
-        }
+#MG{
+    position: fixed;
+    max-height: 33vh;
+    max-width: 70vw;
+    bottom: 13vh;
+    left: 9vw;
+    visibility: hidden;
+}
+
+@-moz-document url-prefix(){
+    #MG{
+        left: 32vw;
     }
+}
 
 /*Para teléfonos*/
 @media only screen and (max-width: 768px) {
@@ -87,4 +90,3 @@ div#meetCard *{
 
 }
 
-/*Cambios en la librería animate.css*/

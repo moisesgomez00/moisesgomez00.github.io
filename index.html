@@ -17,18 +17,15 @@
 
 <body>
     <!--Logo de introducción-->
-    <img src="Multimedia/MG.svg" id="MG" >
+    <img src="Multimedia/MG.svg" id="MG">
     <img src="Multimedia/firma.svg" id="brandShape">
 
-    <!--Firma de fondo-->
-
-    <!--     <img src="Multimedia/firma.svg" id="bg-sing" class="d2 appear"> -->
-
-    <section class="container px-5 p-md-5 section d1" id="principalSection" style="vertical-align: bottom; visibility: hidden;">
+    <section class="container px-5 p-md-5 section d1 " id="principalSectionBg" style="vertical-align: bottom;">
         <div class="row pt-md-5 ">
             <div class="col pt-md-5">
                 <!--Tarjeta de presentación-->
-                <div class="card mt-md-5 d3 border border-dark mx-auto appear" id="meetCard">
+                <div class="card mt-md-5 d3 border border-dark mx-auto appear" id="meetCard"
+                    style="visibility: hidden;">
                     <div class="row g-0">
                         <div class="col-md-5" style="padding: 5px;">
                             <img src="Multimedia/foto.jpg" class="card-img-top card-photo" alt="Photo">
@@ -57,21 +54,20 @@
                 </div>
             </div>
         </div>
-        <div class="row pt-5 p-md-5 ">
-            <div class="row">
-                <div class="col d3 text-end">
-                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" id="aboutMe">
-                        Un poco sobre mi...
-                    </button>
-                </div>
-                <div class="col d3 text-start">
-                    <button type="button" class="btn btn-light btn-b appear" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" id="aboutJob">
-                        Sobre mi trabajo...
-                    </button>
-                </div>
+        <div class="row pt-5 p-md-5 " id="principalBtns" style="visibility: hidden;">
+            <div class="col d3 text-end">
+                <button type="button" class="btn btn-light btn-b" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    id="aboutMe">
+                    Un poco sobre mi...
+                </button>
             </div>
+            <div class="col d3 text-start">
+                <button type="button" class="btn btn-light btn-b" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    id="aboutJob">
+                    Sobre mi trabajo...
+                </button>
+            </div>
+        </div>
         </div>
     </section>
 

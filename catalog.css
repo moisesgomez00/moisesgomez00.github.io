@@ -1,0 +1,22 @@
+:root{
+    --principal: #e5e2da;
+    --secondary: #e6e6e6;
+    --third: #898299;
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+.catItem{
+    background-color: var(--principal);
+    box-shadow: 0px 0px 5px 0px var(--third)
+}
+
+@media only screen and (min-width: 768px) {
+    .catItem{
+        max-height: 40vh;
+        max-width: 80vw;
+    }
+
+}
