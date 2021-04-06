@@ -1,11 +1,10 @@
 /*Raiz y documento completo*/
-
 :root{
-    --first: #17252A;
-    --second: #2B7A78;
-    --third: #3AAFA9;
-    --fourth: #DEF2F1;
-    --fifth: #FEFFFF;
+    --first: #a10b2b;
+    --second: #4f8fe6;
+    --third: #0d2b52;
+    --fourth: #fff59e;
+    --fifth: #f59994;
 
 }
 
@@ -30,6 +29,9 @@ div#meetCard{
     background-color: var(--fourth);
     max-width: 600px;
     border-color: var(--first);
+    -webkit-box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
+    box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
 }
 
 /* Definición de las clases necesarias para capas */
@@ -46,14 +48,6 @@ div#meetCard{
 }
 
 
-/* Botones */
-.btn-b{
-    border: 1px solid var(--first);
-    background-color: var(--fifth);
-} 
-
-
-/*Presentación de marca*/
 
 /*Para desktop*/
 

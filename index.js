@@ -25,6 +25,9 @@ const animateCSS = (element, animation, prefix = 'animate__', delay = 'null') =>
     });
 }
 
+
+
+
 window.addEventListener('load', () => {
     document.getElementById("age").innerHTML = `${getAge()} años`;
     document.getElementById("MG").style.visibility = "visible";
@@ -37,12 +40,16 @@ window.addEventListener('load', () => {
     document.getElementById("brandShape").style.visibility = "visible";
     animateCSS("#brandShape", "lightSpeedInRight").then((message) => {
         animateCSS("#brandShape", "bounceOut", "animate__", "animate__delay-1s").then((res) => {
+            bgColor = getComputedStyle(document.documentElement).getPropertyValue('--third');
+
             document.getElementById("brandShape").style.visibility = "hidden";
-            document.getElementById("principalSectionBg").style.backgroundColor = "#3AAFA9";
+            document.getElementById("principalSectionBg").style.backgroundColor = bgColor;
             document.getElementById("meetCard").style.visibility = "visible";
             animateCSS("#meetCard", "zoomIn").then((message) => {
-                document.getElementById("principalBtns").style.visibility = "visible";
+                document.getElementById("carousel-inner").style.visibility = "visible";
+                animateCSS("#carousel-inner","zoomIn").then((message) =>{})
             });
         });
     });
 });
+
