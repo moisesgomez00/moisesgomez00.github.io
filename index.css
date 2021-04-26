@@ -1,86 +1,64 @@
-/*Raiz y documento completo*/
-:root{
-    --first: #a10b2b;
-    --second: #4f8fe6;
-    --third: #0d2b52;
-    --fourth: #fff59e;
-    --fifth: #f59994;
+/*
+#bea7c9
+*/
+@font-face {
+    font-family: 'OrelegaOne';
+    src:  url('Multimedia/fuentes/OrelegaOne-Regular.ttf') format('truetype');
+  }
+
+
+html{
+    font-family: 'OrelegaOne';
+    background-color: #a02235;
+    font-size: 62.5%
+}
+
+div#businessCard{
+
+    padding: 2rem;
+    margin: 2rem;
+
+    border-radius: 50px;
+    background: linear-gradient(145deg, #901f30, #ab2439);
+    box-shadow:  20px 20px 60px #881d2d, -20px -20px 60px #b8273d;
 
 }
 
 
-/*Secciones*/
-.section{
-    width: 100vw;
-    height: 100vh;
-    min-height: 100%;
-    min-width: 100%;
+
+p#name{
+    font-size: 3rem;
 }
 
-#principalSectionBg{
-    background-color: var(--fourth);
-    transition: background-color 0.5s;
+p.degrees{
+    font-size: 2rem;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
 
-
-/*Elementos de la presentación*/
-div#meetCard{
-    background-color: var(--fourth);
-    max-width: 600px;
-    border-color: var(--first);
-    -webkit-box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
-    -moz-box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
-    box-shadow: 12px 17px 26px -14px rgba(0,0,0,0.75);
 }
 
-/* Definición de las clases necesarias para capas */
-.d1{
-    z-index: 1;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
 }
 
-.d2{
-    z-index: 2;
-}
-
-.d3{
-    z-index: 3;
-}
-
-
-
-/*Para desktop*/
-
-#brandShape{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    visibility: hidden;
-}
-
-#MG{
-    position: fixed;
-    max-height: 33vh;
-    max-width: 70vw;
-    bottom: 13vh;
-    left: 9vw;
-    visibility: hidden;
-}
-
-@-moz-document url-prefix(){
-    #MG{
-        left: 32vw;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    div#businessCard{
+        position: fixed;
+        width: 30%;
+        left: 35%;
     }
 }
 
-/*Para teléfonos*/
-@media only screen and (max-width: 768px) {
-    
-    #MG{
-        max-width: 70vw;
-        bottom: 18vh;
-        left: 3vw;
-    }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
