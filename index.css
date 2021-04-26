@@ -50,6 +50,8 @@ p.degrees{
         position: fixed;
         width: 30%;
         left: 35%;
+
+        cursor: pointer;
     }
 }
 
