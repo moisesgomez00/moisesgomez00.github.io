@@ -2,65 +2,91 @@
 #bea7c9
 */
 @font-face {
-    font-family: 'OrelegaOne';
-    src:  url('Multimedia/fuentes/OrelegaOne-Regular.ttf') format('truetype');
-  }
-
-
-html{
-    font-family: 'OrelegaOne';
-    background-color: #a02235;
-    font-size: 62.5%
+    font-family: "OrelegaOne";
+    src: url("Multimedia/fuentes/OrelegaOne-Regular.ttf") format("truetype");
 }
 
-div#businessCard{
+html {
+    font-family: "OrelegaOne";
+    background: linear-gradient(to left, #da4453, #89216b);
+    font-size: 62.5%;
+}
+
+.card {
+    position: fixed;
 
     padding: 2rem;
     margin: 2rem;
+    
+    height: 87.8%;
+    width: 75%;
 
     border-radius: 50px;
-    background: linear-gradient(145deg, #901f30, #ab2439);
-    box-shadow:  20px 20px 60px #881d2d, -20px -20px 60px #b8273d;
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+    box-shadow: 10px 10px 30px #881d2d, -10px -10px 30px #b8273d;
 
+    backface-visibility: hidden;
+
+    margin-bottom: 2rem;
+
+    transition: all 0.8s ease;
+}
+
+.cardHolder:hover .card.back{
+    transform: rotateY(0deg);
+}
+
+.cardHolder:hover .card.front{
+    transform: rotateY(180deg);
 }
 
 
+.card.back{
+    transform: rotateY(-180deg);
+    background: linear-gradient(to left, #c04848, #480048);
+}
 
-p#name{
+
+.name {
     font-size: 3rem;
 }
 
-p.degrees{
+.degrees {
     font-size: 2rem;
+}
+
+img#michael {
+    position: relative;
+    right: 45%;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    div#businessCard{
+    .card {
         position: fixed;
         width: 30%;
         left: 35%;
 
         cursor: pointer;
     }
+
+    img#michael {
+        position: initial;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
 }
