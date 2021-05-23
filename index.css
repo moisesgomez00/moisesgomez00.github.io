@@ -12,6 +12,11 @@ html {
     font-size: 62.5%;
 }
 
+
+#cardHolder{
+    visibility: hidden;
+}
+
 .card {
     position: fixed;
 
@@ -25,18 +30,20 @@ html {
     background: linear-gradient(to right, #fc5c7d, #6a82fb);
     box-shadow: 10px 10px 30px #881d2d, -10px -10px 30px #b8273d;
 
+    
+    -webkit-backface-visibility: hidden;
+    
     backface-visibility: hidden;
-
     margin-bottom: 2rem;
 
     transition: all 0.8s ease;
 }
 
-.cardHolder:hover .card.back{
+#cardHolder:hover .card.back{
     transform: rotateY(0deg);
 }
 
-.cardHolder:hover .card.front{
+#cardHolder:hover .card.front{
     transform: rotateY(180deg);
 }
 
